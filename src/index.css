@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* Falcon-inspired color palette */
+:root {
+  --falcon-bg-primary: #0a0a0a;
+  --falcon-bg-secondary: #111111;
+  --falcon-bg-tertiary: #1a1a1a;
+  --falcon-bg-elevated: #1f1f1f;
+  --falcon-border: #2a2a2a;
+  --falcon-border-subtle: #1f1f1f;
+  --falcon-text-primary: #ffffff;
+  --falcon-text-secondary: #888888;
+  --falcon-text-muted: #555555;
+  --falcon-accent: #10b981;
+  --falcon-accent-muted: rgba(16, 185, 129, 0.15);
+}
+
+@theme {
+  --color-dark-900: #0a0a0a;
+  --color-dark-800: #111111;
+  --color-dark-700: #1a1a1a;
+  --color-dark-600: #2a2a2a;
+  --color-dark-500: #3a3a3a;
+}
+
+body {
+  background: var(--falcon-bg-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--falcon-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a;
+}
+
+/* ReactFlow custom styles - Falcon theme */
+.react-flow__node {
+  cursor: pointer;
+}
+
+.react-flow__controls {
+  background: var(--falcon-bg-tertiary) !important;
+  border: 1px solid var(--falcon-border) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background: var(--falcon-bg-secondary) !important;
+  border: none !important;
+  border-bottom: 1px solid var(--falcon-border) !important;
+  color: var(--falcon-text-secondary) !important;
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.react-flow__controls-button:last-child {
+  border-bottom: none !important;
+}
+
+.react-flow__controls-button:hover {
+  background: var(--falcon-bg-tertiary) !important;
+  color: var(--falcon-text-primary) !important;
+}
+
+.react-flow__controls-button svg {
+  fill: currentColor !important;
+}
+
+.react-flow__minimap {
+  background: var(--falcon-bg-secondary) !important;
+  border: 1px solid var(--falcon-border) !important;
+  border-radius: 8px !important;
+}
+
+.react-flow__minimap-mask {
+  fill: rgba(0, 0, 0, 0.85) !important;
+}
+
+.react-flow__edge-path {
+  stroke: #333 !important;
+}
+
+/* Input focus styles */
+input:focus {
+  outline: none;
+  border-color: var(--falcon-accent) !important;
+}
